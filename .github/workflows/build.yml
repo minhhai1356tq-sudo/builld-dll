@@ -17,12 +17,15 @@ jobs:
       uses: microsoft/setup-msbuild@v2
 
     - name: Build Solution
-      run: msbuild Fivem-External.sln /p:Configuration=Release /p:Platform=x86
+      # Đã thêm đường dẫn thư mục con vào trước file .sln
+      run: msbuild Fivem-External/Fivem-External.sln /p:Configuration=Release /p:Platform=x86
 
     - name: Upload DLL Artifact
       uses: actions/upload-artifact@v4
       with:
         name: Cheat-DLL-x86
+        # Quét tìm file dll ở mọi ngóc ngách trong thư mục build
         path: |
           **/x86/Release/*.dll
           **/Release/*.dll
+          **/*.dll
