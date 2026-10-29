@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "x64\\Release\\freetype.obj",
+            "outputs": [
+                "x64\\Release\\freetype.h_2A2E11A7FFD402AB.ifc.dt.module.json",
+                "x64\\Release\\freetype.h_2A2E11A7FFD402AB.ifc.dt.d.json",
+                "x64\\Release\\freetype.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "C:\\Users\\PC\\Downloads\\lol_bins\\lol_bins\\lol_bins\\Fivem-External\\FrameWork\\Dependencies\\ImGui\\freetype.h",
+                    "source-path": "c:\\users\\pc\\downloads\\lol_bins\\lol_bins\\lol_bins\\fivem-external\\framework\\dependencies\\imgui\\freetype.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}
