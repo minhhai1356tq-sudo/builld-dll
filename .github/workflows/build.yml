@@ -1,0 +1,28 @@
+name: Build DLL
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Build Solution
+      run: msbuild Fivem-External.sln /p:Configuration=Release /p:Platform=x86
+
+    - name: Upload DLL Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: Cheat-DLL-x86
+        path: |
+          **/x86/Release/*.dll
+          **/Release/*.dll
