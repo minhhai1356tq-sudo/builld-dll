@@ -17,14 +17,14 @@ jobs:
       uses: microsoft/setup-msbuild@v2
 
     - name: Build Solution
-      # Tìm chính xác file .sln có chứa chữ "Fivem" hoặc "viperx"
+      # Quét toàn bộ tìm file .vcxproj của Fivem hoặc viperx (bỏ qua sln)
       run: |
-        $sln = Get-ChildItem -Path . -Filter *.sln -Recurse | Where-Object { $_.Name -match "Fivem|viperx|internal" } | Select-Object -First 1
-        if ($sln) {
-          Write-Host "Tìm thấy file: $($sln.FullName)"
-          msbuild $sln.FullName /p:Configuration=Release /p:Platform=x86
+        $proj = Get-ChildItem -Path . -Filter *.vcxproj -Recurse | Where-Object { $_.Name -match "Fivem|viperx|internal" } | Select-Object -First 1
+        if ($proj) {
+          Write-Host "Tìm thấy project: $($proj.FullName)"
+          msbuild $proj.FullName /p:Configuration=Release /p:Platform=x86
         } else {
-          Write-Error "Không tìm thấy file .sln nào của source hack!"
+          Write-Error "Không tìm thấy file .vcxproj nào của source hack!"
         }
 
     - name: Upload DLL Artifact
