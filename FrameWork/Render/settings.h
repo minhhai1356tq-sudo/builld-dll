@@ -3,7 +3,7 @@
 #include <ImGui/imgui.h>
 #include <ImGui/imgui_internal.h>
 
-#include <D3DX11.h>
+// #include <D3DX11.h> // Đã comment để build trên Github Actions
 #pragma once
 namespace settings {
 
@@ -80,7 +80,7 @@ namespace font
 #pragma once
 
 #include <d3d11.h>
-#include <d3dx11.h>
+// #include <d3dx11.h> // Đã comment để build trên Github Actions
 
 namespace FWork {
 	namespace Fonts {
