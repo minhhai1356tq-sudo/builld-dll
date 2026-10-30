@@ -7,7 +7,7 @@
 class OffsetsffNormal {
 public:
     static inline uintptr_t Il2Cpp = 0x0;
-    static inline uintptr_t InitBase = 0x0; // MUST scan at runtime (Pattern Scan)
+    static inline uintptr_t InitBase = 0xA342EFC; // Đã có offset chính xác từ Steph Wolf Dump
     static inline uintptr_t StaticClass = 0x5C;
 
     static inline uintptr_t CurrentMatch = 0x50;
@@ -16,11 +16,12 @@ public:
     static inline uintptr_t DictionaryEntities = 0x68;
 
     static inline uintptr_t Player_IsDead = 0x54; // PlayerData.isDead
-    static inline uintptr_t Player_Name = 0x320;  // Player_OriginalNickName (đã sửa từ 0x31C)
+    static inline uintptr_t Player_Name = 0x320;  // Player_OriginalNickName
     static inline uintptr_t Player_Data = 0x48; 
     
     static inline uintptr_t Player_TeamModeID = 0x2D4; // Thêm mới từ dump
     static inline uintptr_t Player_IsClientBot = 0x324; // Thêm mới từ dump
+    static inline uintptr_t IsClientBot = 0x324; // Alias cho v7a.cpp
     static inline uintptr_t Player_ShadowBase = 0x14E8; // Player.PhysXData
     
     static inline uintptr_t XPose = 0x78;
@@ -107,7 +108,7 @@ public:
 class OffsetsffmaxBeta {
 public:
     static inline uintptr_t Il2Cpp = 0x0;
-    static inline uintptr_t InitBase = 0x0;
+    static inline uintptr_t InitBase = 0xA342EFC; // Sửa lại cho đúng chuẩn
     static inline uintptr_t StaticClass = 0x5C;
     static inline uintptr_t Libanogs = 0x0;
     static inline uintptr_t Libunity = 0x2514;
@@ -118,7 +119,7 @@ public:
     static inline uintptr_t DictionaryEntities = 0x68;
 
     static inline uintptr_t Player_IsDead = 0x54;
-    static inline uintptr_t Player_Name = 0x320; // Đã sửa từ 0x31C
+    static inline uintptr_t Player_Name = 0x320;
     static inline uintptr_t Player_Data = 0x48;
     
     static inline uintptr_t PlayerID = 0x298;
