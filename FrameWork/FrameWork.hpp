@@ -34,9 +34,9 @@
 // Nlohmann
 #include "Dependencies/NlohmannJson.hpp"
 
-// DirectX Inlcude
+// DirectX Include
 #include <d3d11.h>
-#include <d3dx11.h>
+// #include <d3dx11.h> // Commented out for Github Actions build
 
 
 #define XorStr(str) jmXorStr(str)
