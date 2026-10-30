@@ -1,10 +1,11 @@
 #pragma once
+#include <d3d11.h> // BẮT BUỘC phải có dòng này để dùng ID3D11ShaderResourceView
 #include "colors_widgets.h"
 #include <ImGui/imgui.h>
 #include <ImGui/imgui_internal.h>
 
 // #include <D3DX11.h> // Đã comment để build trên Github Actions
-#pragma once
+
 namespace settings {
 
     inline ImVec2 size_menu = ImVec2(640, 520);
@@ -76,11 +77,6 @@ namespace font
 	inline ImFont* inter_medium = nullptr;
 	inline ImFont* icon_notify = nullptr;
 }
-
-#pragma once
-
-#include <d3d11.h>
-// #include <d3dx11.h> // Đã comment để build trên Github Actions
 
 namespace FWork {
 	namespace Fonts {
