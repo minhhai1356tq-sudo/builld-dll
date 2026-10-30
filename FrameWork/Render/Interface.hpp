@@ -2,7 +2,7 @@
 
 #include <FrameWork/FrameWork.hpp>
 #include <d3d11.h>
-#include <d3dx11.h>
+// #include <d3dx11.h> // Đã comment để build trên Github Actions
 
 namespace FrameWork
 {
