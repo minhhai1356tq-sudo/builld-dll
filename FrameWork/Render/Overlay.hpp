@@ -1,43 +1,13 @@
 #pragma once
 #include <Windows.h>
-#include <functional>
+#include <string>
+#include <algorithm>
+#include <cctype>
+#include <vector>
+#include <TlHelp32.h>
+#include <d3d11.h> // Include DX11 chuẩn
 
-#include <d3d11.h>
-#include <d3dx11.h>
-
-
-
-extern HWND hWindow;
-extern HWND hTargetWindow;
-extern bool bInitialized;
-namespace FrameWork {
-	namespace Overlay
-	{
-
-		void Setup(HWND TargetHWND);
-		void Initialize();
-		void ShutDown();
-
-		void UpdateWindowPos();
-		void SetupWindowProcHook(std::function<void(HWND, UINT, WPARAM, LPARAM)> Funtion);
-
-		bool IsSettuped();
-		bool IsInitialized();
-		HWND GetOverlayWindow();
-		HWND GetTargetWindow();
-
-		// DirectX
-		void dxInitialize();
-		void dxRefresh();
-		void dxShutDown();
-
-		void dxCreateRenderTarget();
-		void dxCleanupRenderTarget();
-		void dxCleanupDeviceD3D();
-
-		ID3D11Device* dxGetDevice();
-		ID3D11DeviceContext* dxGetDeviceContext();
-		IDXGISwapChain* dxGetSwapChain();
-		ID3D11RenderTargetView* dxGetRenderTarget();
-	}
+namespace Render
+{
+    HWND FindRenderWindow();
 }
