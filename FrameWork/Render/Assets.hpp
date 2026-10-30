@@ -7,7 +7,8 @@
 #include "Assets/FontAwesome.hpp"
 
 #include <d3d11.h>
-#include <d3dx11.h>
+// #include <d3dx11.h> // Commented out for Github Actions build
+
 inline ImFont* icon_font;
 namespace FrameWork
 {
